@@ -12,7 +12,7 @@ runs:
     - name: "Welcome"
       shell: bash
       run: |
-        echo "Welcome ${{ github.event.workflow_run.title }}"
+        echo "Welcome ${{ github.event.workflow_run.head_branch }}"
         if [ ${{ inputs.token }} -eq "" ]
         then
           echo "Hello"
